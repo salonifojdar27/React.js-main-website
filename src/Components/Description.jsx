@@ -30,17 +30,12 @@ const Description = () => {
         <div className="product-card-container container" style={{ marginTop: "5%" }}>
             <Card className="p-4 shadow">
                 <div className="row align-items-center">
-                    {/* Left Column - Product Image */}
-
                     <div className="product-card-container container" style={{ marginTop: "5%" }}>
                         <Card className="p-4 shadow">
                             <div className="row align-items-center">
-
                                 <div className="col-md-6 text-center">
-                                    <Link to={"l̥/Description"}> <Card.Img variant="top" src={products.image} className="img-fluid product-image" style={{ maxHeight: "400px", objectFit: "contain" }} /></Link>
+                                    <Link to={"/Description"}> <Card.Img variant="top" src={products.image} className="img-fluid product-image" style={{ maxHeight: "400px", objectFit: "contain" }} /></Link>
                                 </div>
-
-                                {/* Right Column - Product Description  is shown here*/}
                                 <div className="col-md-6">
                                     <Card.Body>
                                         <Card.Title className="title mb-3">{products.title}</Card.Title>
