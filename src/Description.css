@@ -1,0 +1,19 @@
+
+.product-card-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.product-image {
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.product-image:hover {
+  transform: scale(1.03);
+}
+
+.Product-button {
+  width: 100%;
+  font-weight: bold;
+}
