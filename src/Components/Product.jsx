@@ -32,15 +32,42 @@ const Product = () => {
   };
 
   return (
+
     <div className="container mt-4">
+      {/* Category Filter Dropdown */}
+      <div className="mb-4 text-center">
+        <label className="me-2 fw-bold">Filter by Category:</label>
+        <select className="form-select w-auto d-inline-block" >
+          <option value="">Mens</option>
+          <option value="">Jackets</option>
+          <option value="">Jewellery</option>
+          <option value="">Electronics</option>
+        </select>
+      </div>
+      <div className="col-md-4" style={{ marginLeft: "35%", marginTop: "2%" }}>
+        <input type="text" placeholder="Search by product name" className="form-control" />
+      </div>
+
+      {/* Product Grid */}
       <div className="row justify-content-center">
         {products.map((product) => (
-          <div className="col-md-4 d-flex justify-content-center mb-4">
-            <ProductCard key={product.id} {...product} onDelete={() => handleDelete(product.id)} />
+          <div key={product.id} className="col-md-4 d-flex justify-content-center mb-4">
+            <ProductCard {...product} onDelete={() => handleDelete(product.id)} />
           </div>
         ))}
       </div>
     </div>
+
+
+    // <div className="container mt-4">
+    //   <div className="row justify-content-center">
+    //     {products.map((product) => (
+    //       <div className="col-md-4 d-flex justify-content-center mb-4">
+    //         <ProductCard key={product.id} {...product} onDelete={() => handleDelete(product.id)} />
+    //       </div>
+    //     ))}
+    //   </div>
+    // </div>
   )
 }
 

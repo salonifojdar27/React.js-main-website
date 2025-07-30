@@ -28,16 +28,6 @@
   background-color: rgba(37, 134, 232, 1);
 }
 
-.Navbar a:hover {
-  background-color: rgba(37, 134, 232, 0.1);
-  color: #2586e8;
-}
-
-.Navbar a.active {
-  color: white;
-  background-color: rgba(37, 134, 232, 1);
-}
-
 .product-card-container {
   display: flex;
   justify-content: center;
@@ -109,19 +99,11 @@
   background-color: #c82333;
 }
 
-/* .login {
+.login {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-} */
-
-.login h1 {
-  text-align: center;
-  font-size: 38px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 500;
-  margin-top: 5%;
 }
 
 form {
@@ -133,8 +115,7 @@ form {
   flex-direction: column;
   width: 400px;
   height: 300px;
-  margin-left: 37%;
-  margin-top: 5%;
+  margin-bottom: 8%;
 }
 
 form input {
@@ -159,8 +140,12 @@ form button {
   font-size: 17px;
   border-radius: 8px;
   border: none;
-
   text-align: center;
   margin-left: 33%;
   margin-top: 7%;
+}
+
+form button:hover {
+  color: white;
+  background-color: rgb(1, 126, 251);
 }
