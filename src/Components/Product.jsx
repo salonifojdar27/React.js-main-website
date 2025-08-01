@@ -6,12 +6,13 @@ import ProductCard from './ProductCard'
 
 const Product = () => {
   const [products, setProducts] = useState([])
-
+console.log("I am from product")
 
   // Create function for fetching data //
   async function fetchProducts() {
     try {
       const response = await axios.get('http://localhost:3000/products')
+      console.log(response)
       setProducts(response.data)
     } catch (error) {
       console.log(error)
