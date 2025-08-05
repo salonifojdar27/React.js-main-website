@@ -2,11 +2,12 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import ProductCard from './ProductCard'
+import { toast } from 'react-toastify'
 
 
 const Product = () => {
   const [products, setProducts] = useState([])
-console.log("I am from product")
+  console.log("I am from product")
 
   // Create function for fetching data //
   async function fetchProducts() {
@@ -14,8 +15,10 @@ console.log("I am from product")
       const response = await axios.get('http://localhost:3000/products')
       console.log(response)
       setProducts(response.data)
+      toast.success("product fetch")
     } catch (error) {
       console.log(error)
+      toast.error("product not fetch")
     }
   };
 
