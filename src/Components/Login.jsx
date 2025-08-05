@@ -14,13 +14,13 @@ const Login = () => {
     console.log(userdata)
 
     try {
-      const resp = await axios.post("https://reqres.in/api/login", userdata, {
+      const res = await axios.post("https://reqres.in/api/login", userdata, {
         headers: {
           "Content-Type": "application/json",
           "x-api-key": "reqres-free-v1"
         }
       })
-      console.log(resp)
+      console.log(res)
     } catch (error) {
       console.log(error)
     }

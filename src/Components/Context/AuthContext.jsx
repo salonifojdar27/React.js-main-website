@@ -4,7 +4,7 @@ import { createContext, useState } from "react";
 const AuthContext = createContext();
 
 export function AuthContextProvider({ children }) {
-    const [token] = useState(null);
+    const [token] = useState(true);
 
     return (
         <AuthContext.Provider value={{ token }}>
