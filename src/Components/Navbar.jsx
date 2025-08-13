@@ -9,15 +9,6 @@ const linkdata = [{
     id: 2,
     path: "/Product",
     text: "Product"
-}, {
-    id: 3,
-    path: "/AddProduct",
-    text: "AddProduct"
-},
-{
-    id: 4,
-    path: "/Edit",
-    text: "Edit"
 },
 {
     id: 5,
