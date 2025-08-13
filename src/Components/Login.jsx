@@ -1,45 +1,4 @@
 
-// import axios from "axios";
-// import { useState } from "react"
-
-// const Login = () => {
-
-//   const [email, setemail] = useState("");
-//   const [password, setpassword] = useState("");
-
-//   async function handlelogin(e) {
-//     e.preventDefault();
-
-//     let userdata = { email, password }
-//     console.log(userdata)
-
-//     try {
-//       const res = await axios.post("https://reqres.in/api/login", userdata, {
-//         headers: {
-//           "Content-Type": "application/json",
-//           "x-api-key": "reqres-free-v1"
-//         }
-//       })
-//       console.log(res)
-//     }
-//     catch (error) {
-//       console.log(error)
-//     }
-//   }
-
-//   return (
-//     <div className="login">
-//       <form action="" onSubmit={handlelogin}>
-//         <input type="text" value={email} onChange={(e) => setemail(e.target.value)} placeholder="Enter your email" />
-//         <input type="password" value={password} onChange={(e) => setpassword(e.target.value)} placeholder="Enter your Password" />
-//         <button type="submit">Submit</button>
-//       </form>
-//     </div>
-//   )
-// }
-
-// export default Login
-
 import axios from "axios";
 import { useState } from "react";
 import { toast } from "react-toastify";
@@ -64,7 +23,6 @@ const Login = () => {
 
       console.log(res.data);
 
-      // ✅ Local Storage me save karo
       localStorage.setItem("userData", JSON.stringify(userdata)); // email & password
       localStorage.setItem("token", res.data.token); // API token
       setemail("");

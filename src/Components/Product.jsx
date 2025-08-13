@@ -62,16 +62,6 @@ const Product = () => {
       </div>
     </div>
 
-
-    // <div className="container mt-4">
-    //   <div className="row justify-content-center">
-    //     {products.map((product) => (
-    //       <div className="col-md-4 d-flex justify-content-center mb-4">
-    //         <ProductCard key={product.id} {...product} onDelete={() => handleDelete(product.id)} />
-    //       </div>
-    //     ))}
-    //   </div>
-    // </div>
   )
 }
 
