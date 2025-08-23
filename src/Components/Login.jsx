@@ -12,7 +12,6 @@ const Login = () => {
 
     let userdata = { email, password };
     console.log(userdata);
-
     try {
       const res = await axios.post("https://reqres.in/api/login", userdata, {
         headers: {
@@ -32,15 +31,15 @@ const Login = () => {
     }
     catch (error) {
       console.log(error);
-      toast.error("Login Failed!");
+      toast.error(error?.response?.data?.error || "Login Failed!");
     }
   }
 
   return (
     <div className="login">
       <form action="" onSubmit={handlelogin}>
-        <input type="text" value={email} onChange={(e) => setemail(e.target.value)} placeholder="Enter your email" />
-        <input type="password" value={password} onChange={(e) => setpassword(e.target.value)} placeholder="Enter your Password" />
+        <input type="text" value={email} onChange={(e) => setemail(e.target.value)} placeholder="Enter your email" required autoComplete="email" />
+        <input type="password" value={password} onChange={(e) => setpassword(e.target.value)} placeholder="Enter your Password" required autoComplete="password" />
         <button type="submit">Submit</button>
       </form>
     </div>
@@ -48,4 +47,5 @@ const Login = () => {
 };
 
 export default Login;
+
 
